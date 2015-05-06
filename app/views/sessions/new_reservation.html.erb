@@ -1,0 +1,30 @@
+<h2>Register for the <%= @time %>  session on <%= @date %></h2>
+
+<div class="page-header">
+  <%= form_tag "/sessions/#{@session.id}/new_reservation", :method => 'post' do %>
+  
+    <% if @error != nil %>
+    
+      <div class="alert alert-danger" role="alert">
+        <strong>Error: </strong>
+        <%= @error %>
+      </div>
+      
+    <% end %>
+    
+    <h4>First Name</h4>
+    <%= text_field_tag :first %>
+    
+    <h4>Last Name</h4>
+    <%= text_field_tag :last %>
+    
+    <h4>Email Address</h4>
+    <%= email_field_tag :email %>
+    <br><br>
+    
+    <button type="submit" class="btn btn-primary">
+       Register
+    </button>
+    
+  <% end %>
+</div>

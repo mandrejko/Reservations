@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  current_capacity: 1
+  max_capacity: 1
+
+two:
+  date: MyString
+  current_capacity: 1
+  max_capacity: 1
