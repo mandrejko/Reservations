@@ -1,24 +1,16 @@
+# Reservations by Matt Andrejko
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+This is a web application made in Rails for my 2015 Senior Thesis project at Carthage 
+College.
 
+## Usage
 
-Welcome to your Rails project on Cloud9 IDE!
+_Home Page_ - select a date to view sessions taking place on that date. Click reserve
+slot to register for that session.
 
-To get started, just do the following:
+_Email Seach_ - Type in an email to see all sessions that email has been registered
+for on and after the current date.
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://reservations-kibblre-2.c9.io/).
+## Contact
 
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+Email me at mandrejko@carthage.edu to get in touch with me.
