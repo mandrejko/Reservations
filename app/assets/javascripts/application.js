@@ -32,17 +32,36 @@ $(document).ready(function() {
         fillDateTable(date, dateTitle);
     });
     
-    //deal with the email search page
-    var today = "2015-05-12"
     var emailElem = $("#email");
     var emailTitle = $("#email-title")
     
     $('#search').click(function(){
         var email = emailElem.val();
         
-        fillEmailTable(today, email, emailTitle);
+        fillEmailTable(getTodayString(), email, emailTitle);
     });
 });
+
+function getTodayString(){
+    var todayTemp = new Date();
+    var today = todayTemp.getFullYear() + "-";
+    
+    if(todayTemp.getMonth() < 10){
+        today += "0" + (todayTemp.getMonth() + 1) + "-";
+    }
+    else{
+        today += (todayTemp.getMonth() + 1) + "-";
+    }
+    
+    if(todayTemp.getDay() < 10){
+        today += "0" + (todayTemp.getDay() + 1);
+    }
+    else{
+        today += (todayTemp.getDay() + 1);
+    }
+    
+    return today;
+}
 
 function fillDateTable(date, dateTitle){
     $.get('/sessions/home/filter', {date: date}, function(data) {
