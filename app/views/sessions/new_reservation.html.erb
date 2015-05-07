@@ -13,10 +13,10 @@
     <% end %>
     
     <h4>First Name</h4>
-    <%= text_field_tag :first %>
+    <%= text_field_tag :first, nil, :required => true %>
     
     <h4>Last Name</h4>
-    <%= text_field_tag :last %>
+    <%= text_field_tag :last, nil, :required => true %>
     
     <h4>Email Address</h4>
     <%= email_field_tag :email %>
