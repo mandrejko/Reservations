@@ -59,12 +59,6 @@ class SessionsController < ApplicationController
     render 'sessions/email_search'
   end
   
-  def invalid_email
-    @invalid = true;
-    
-    render 'sessions/email_search'
-  end
-  
   def filter
     date = params[:date]
     @sessions = Session.where(date: date)
