@@ -60,8 +60,8 @@ class SessionsController < ApplicationController
   end
   
   def invalid_email
-    puts "test2"
     @invalid = true;
+    
     render 'sessions/email_search'
   end
   
@@ -75,16 +75,11 @@ class SessionsController < ApplicationController
   end
   
   def email_search
-      #take in email, search if it exists
-      #if it does, show sessions ON or AFTER today
-      #if not, yell at user
-      
       user = User.where(email: params[:email]).first
       if user != nil
         @sessions = user.sessions.where("date >= ?", params[:date])
       else
         @session = []
-        puts "test1"
       end
       
       respond_to do |format|
@@ -117,12 +112,14 @@ class SessionsController < ApplicationController
       @session.update(current_capacity: capacity)
       
       @success = true;
+      
       render 'sessions/home'
     else
       @error = 'This email is already registered for this session'
       
       @date = @session.date
       @time = @session.time
+      
       render 'sessions/new_reservation'
     end
     
