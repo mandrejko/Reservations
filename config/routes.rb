@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'sessions/:id/new_reservation' => 'sessions#new_reservation'
   post 'sessions/:id/new_reservation' => 'sessions#create_reservation'
   get 'sessions/home/filter' => 'sessions#filter'
+  get 'email_search' => 'sessions#email'
+  get 'sessions/email_search/filter' => 'sessions#email_search'
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

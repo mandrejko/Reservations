@@ -55,6 +55,16 @@ class SessionsController < ApplicationController
     render 'sessions/home'
   end
   
+  def email
+    render 'sessions/email_search'
+  end
+  
+  def invalid_email
+    puts "test2"
+    @invalid = true;
+    render 'sessions/email_search'
+  end
+  
   def filter
     date = params[:date]
     @sessions = Session.where(date: date)
@@ -62,6 +72,24 @@ class SessionsController < ApplicationController
     respond_to do |format|
       format.json { render json: @sessions }
     end
+  end
+  
+  def email_search
+      #take in email, search if it exists
+      #if it does, show sessions ON or AFTER today
+      #if not, yell at user
+      
+      user = User.where(email: params[:email]).first
+      if user != nil
+        @sessions = user.sessions.where("date >= ?", params[:date])
+      else
+        @session = []
+        puts "test1"
+      end
+      
+      respond_to do |format|
+        format.json { render json: @sessions }
+      end
   end
   
   def new_reservation

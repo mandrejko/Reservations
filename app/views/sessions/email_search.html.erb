@@ -1,0 +1,35 @@
+<h2>Enter an email</h2>
+
+<input type="email" id="email" name="email">
+<p></p><button type="button" class="btn btn-primary" id="search">Search</button>
+<br>
+
+<div class="page-header" id="email-header">
+  <h3 id="email-title">
+  </h3>
+</div>
+
+<div class="page-header" id="email-error" style="display:none;">
+  <div class="alert alert-danger" role="alert">
+      <strong>Error:</strong> This email is not in our database.
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8">
+    <table class="table" id="table" style="display:none">
+      <thead id="table-header">
+        <tr>
+          <th align="center">Date</th>  
+          <th align="center">Time</th>
+          <th align="center">Current Capacity</th>
+          <th align="center">Maximum Capacity</th>
+          <th colspan="1"></th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <tr>
+      </tbody>
+    </table>
+  </div>
+</div>
